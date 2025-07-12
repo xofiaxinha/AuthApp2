@@ -48,10 +48,12 @@ fun ForgotPasswordScreen(viewModel: AuthViewModel, navController: NavController)
             isError = !isEmailValid,
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(8.dp),
-            colors = TextFieldDefaults.outlinedTextFieldColors(
-                focusedBorderColor = if (isEmailValid) MaterialTheme.colorScheme.primary else Color.Red,
-                unfocusedBorderColor = if (isEmailValid) MaterialTheme.colorScheme.onSurface else Color.Red,
-                errorBorderColor = Color.Red,
+            colors = TextFieldDefaults.colors(
+                focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                focusedLabelColor = MaterialTheme.colorScheme.primary,
+                unfocusedIndicatorColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                errorIndicatorColor = Color.Red,
                 errorLabelColor = Color.Red
             )
         )
